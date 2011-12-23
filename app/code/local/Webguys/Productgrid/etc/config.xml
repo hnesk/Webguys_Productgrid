@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package     Webguys_Productgrid
+ * @copyright   2011 Johannes Künsebeck <jk@hdnet.de>
+ */
+-->
+<config>
+	<modules>
+		<Webguys_Productgrid>
+			<version>0.1.0</version>
+		</Webguys_Productgrid>
+	</modules>
+	<global>
+		<models>
+			<webguys_productgrid>
+				<class>Webguys_Productgrid_Model</class>
+			</webguys_productgrid>
+		</models>
+		<helpers>
+			<webguys_productgrid>
+				<class>Webguys_Productgrid_Helper</class>
+			</webguys_productgrid>
+		</helpers>
+		<blocks>
+			<webguys_productgrid>
+				<class>Webguys_Productgrid_Block</class>
+			</webguys_productgrid>
+		</blocks>
+	</global>
+	<adminhtml>
+		<events>			
+			<adminhtml_block_html_before>
+				<observers>
+                    <webguys_productgrid_adminhtml_block_html_before>
+                        <class>webguys_productgrid/observer</class>
+                        <method>beforeBlockToHtml</method>
+                    </webguys_productgrid_adminhtml_block_html_before>
+                </observers>				
+			</adminhtml_block_html_before>
+			<catalog_product_collection_load_before>
+				<observers>
+                    <webguys_productgrid_adminhtml_block_html_before>
+                        <class>webguys_productgrid/observer</class>
+                        <method>beforeCatalogProductCollectionLoad</method>
+                    </webguys_productgrid_adminhtml_block_html_before>
+                </observers>								
+			</catalog_product_collection_load_before>
+		</events>		
+	</adminhtml>
+</config>

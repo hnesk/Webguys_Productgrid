@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mage
+ * @package     Webguys_Productgrid
+ * @copyright   December 21 2011 jk
+ */
+-->
+<config>
+    <modules>
+        <Webguys_Productgrid>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webguys_Productgrid>
+    </modules>
+</config>
